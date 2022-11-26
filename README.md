@@ -114,6 +114,13 @@ python3 main.py
 
 ```
 .
+├── assets
+│   ├── 1.png
+│   ├── 2.png
+│   ├── GD.png
+│   ├── GS.png
+│   ├── main.jpg
+│   └── outcome.png
 ├── Book1.twb
 ├── Data
 │   ├── code4.ipynb
