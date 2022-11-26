@@ -19,7 +19,6 @@
   - [🔥 Probability Measure](#-probability-measure)
   - [🚇 Cross-Entropy](#-cross-entropy)
 - [📖 Data Preprocessing](#book-data-preprocessing)
-- [🔗 Download](#link-download)
 - [🔑 Prerequisites](#key-prerequisites)
 - [🚀&nbsp; Installation](#-installation)
 - [💡 How to Run](#bulb-how-to-run)
@@ -285,4 +284,4 @@ Made with ❤️&nbsp; by [Chaganti Reddy](https://github.com/Chaganti-Reddy/)
 
 # 👀 License
 
-MIT © [Chaganti Reddy](https://github.com/Chaganti-Reddy/Hand-Digit-Recognition/blob/main/LICENSE)
+MIT © [Chaganti Reddy](https://github.com/Chaganti-Reddy/Kelly-Betting/blob/main/LICENSE)
