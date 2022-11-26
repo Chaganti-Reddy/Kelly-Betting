@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        .name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            height: 60px;
+            width: 500px;
+            padding: 10px;
+            background-color: rgba(116, 64, 211, 0.774);
+            border: green solid 3px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Meera Inimai', sans-serif;
+            color: rgb(31, 196, 105);
+        }
+
+        .t {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .table {
+            width: 380px;
+            background-color: rgba(116, 64, 211, 0.774);
+            border: green solid 5px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Meera Inimai', sans-serif;
+            color: rgb(31, 196, 105);
+        }
+
+        table {
+            border-color: black;
+            border-collapse: collapse;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body bgcolor="#b696db">
+    <center>
+        <div class="t">
+            <div class="name"> Home Team : {{ Home_Team_Name }}</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="name"> Away Team : {{ Away_Team_Name }}</div>
+        </div>
+        <br>
+        <center>
+            <div class="table">
+                <table border="2">
+                    <tr>
+                        <td>Outcome</td>
+                        <td>Probability</td>
+                        <td>Odds</td>
+                    </tr>
+                    <tr>
+                        <td>Win</td>
+                        <td>{{ proba_of_win }}</td>
+                        <td>{{ odds_of_win }}</td>
+                    </tr>
+                    <tr>
+                        <td>Draw</td>
+                        <td>{{ proba_of_draw }}</td>
+                        <td>{{ odds_of_draw }}</td>
+                    </tr>
+                    <tr>
+                        <td>Lose</td>
+                        <td>{{ proba_of_lose }}</td>
+                        <td>{{ odds_of_lose }}</td>
+                </table>
+            </div>
+        </center>
+        <br>
+        <div class="name" style="width: 800px;">You should bet {{ betting_amount }} £ as per Kelly Betting</div>
+        <br>
+        <div class="name">Profit would be {{ profit }} £</div>
+        <br>
+        <div class="name" style="width: 800px;">Match will be {{ data }} by {{ Home_Team_Name }}</div>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Betting</title>
+    <style>
+        .s1 {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            background-color: rgb(168, 0, 112);
+            color: rgba(0, 0, 255, 0.596);
+            font-family: 'Meera Inimai', sans-serif;
+            font-size: 50px;
+        }
+
+        .s2 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-self: center;
+            align-content: center;
+            color: rgba(140, 0, 255, 0.678);
+            font-size: 30px;
+            font-family: 'Meera Inimai', sans-serif;
+
+        }
+
+        button {
+            border: 1px solid blue;
+            height: 60px;
+            width: 120px;
+            border-radius: 3px;
+            color: white;
+            background-color: blueviolet;
+            font-size: 15px;
+        }
+
+        select {
+            border: 1px solid blue;
+            height: 30px;
+            border-radius: 3px;
+            color: rgb(38, 29, 29);
+            background-color: rgb(240, 234, 245);
+            font-size: 15px;
+        }
+
+        input {
+            border: 1px solid blue;
+            height: 30px;
+            border-radius: 3px;
+            color: rgb(20, 18, 18);
+            background-color: rgb(240, 234, 245);
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#b0cffc">
+    <div class="s1">Caluclulate the Betting Amount and Profit on Football Match</div><br>
+    <br>
+    <br>
+    <form action="predict" method="POST" enctype="multipart/form-data">
+        <center>
+            <div class="s2">
+                <label for="Home_Team_Name">Home Team Name</label>&nbsp;&nbsp;
+                <select name="Home_Team_Name" id="Home_Team_Name" required>
+                    <option value="">Select Home Team</option>
+                    <option value="AFC Bournemouth">AFC Bournemouth</option>
+                    <option value="Arsenal">Arsenal</option>
+                    <option value="Aston Villa">Aston Villa</option>
+                    <option value="Brentford">Brentford</option>
+                    <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                    <option value="Burnley">Burnley</option>
+                    <option value="Cardiff City">Cardiff City</option>
+                    <option value="Chelsea">Chelsea</option>
+                    <option value="Crystal Palace">Crystal Palace</option>
+                    <option value="Everton">Everton</option>
+                    <option value="Fulham">Fulham</option>
+                    <option value="Huddersfield Town">Huddersfield Town</option>
+                    <option value="Hull City">Hull City</option>
+                    <option value="Leeds United">Leeds United</option>
+                    <option value="Leicester">Leicester</option>
+                    <option value="Liverpool">Liverpool</option>
+                    <option value="Man. City">Man City</option>
+                    <option value="Man. Utd">Man. Utd</option>
+                    <option value="Middlesbrough">Middlesbrough</option>
+                    <option value="Newcastle">Newcastle</option>
+                    <option value="Norwich City">Norwich City</option>
+                    <option value="Queens Park Rangers">Queens Park Rangers</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Sheffield United">Sheffield United</option>
+                    <option value="Southampton">Southampton</option>
+                    <option value="Stoke City">Stoke City</option>
+                    <option value="Sunderland">Sunderland</option>
+                    <option value="Swansea City">Swansea City</option>
+                    <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                    <option value="Watford">Watford</option>
+                    <option value="West Bromwich Albion">West Bromwich Albion</option>
+                    <option value="West Ham">West Ham</option>
+                    <option value="Wigan Athletic">Wigan Athletic</option>
+                    <option value="Wolves">Wolves</option>
+                </select>
+            </div>
+            <br>
+            <div class="s2">
+                <label for="Away_Team_Name">Away Team Name</label>&nbsp;&nbsp;
+                <select name="Away_Team_Name" id="Away_Team_Name" required>
+                    <option value="">Select Home Team</option>
+                    <option value="AFC Bournemouth">AFC Bournemouth</option>
+                    <option value="Arsenal">Arsenal</option>
+                    <option value="Aston Villa">Aston Villa</option>
+                    <option value="Brentford">Brentford</option>
+                    <option value="Brighton & Hove Albion">Brighton & Hove Albion</option>
+                    <option value="Burnley">Burnley</option>
+                    <option value="Cardiff City">Cardiff City</option>
+                    <option value="Chelsea">Chelsea</option>
+                    <option value="Crystal Palace">Crystal Palace</option>
+                    <option value="Everton">Everton</option>
+                    <option value="Fulham">Fulham</option>
+                    <option value="Huddersfield Town">Huddersfield Town</option>
+                    <option value="Hull City">Hull City</option>
+                    <option value="Leeds United">Leeds United</option>
+                    <option value="Leicester">Leicester</option>
+                    <option value="Liverpool">Liverpool</option>
+                    <option value="Man. City">Man City</option>
+                    <option value="Man. Utd">Man. Utd</option>
+                    <option value="Middlesbrough">Middlesbrough</option>
+                    <option value="Newcastle">Newcastle</option>
+                    <option value="Norwich City">Norwich City</option>
+                    <option value="Queens Park Rangers">Queens Park Rangers</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Sheffield United">Sheffield United</option>
+                    <option value="Southampton">Southampton</option>
+                    <option value="Stoke City">Stoke City</option>
+                    <option value="Sunderland">Sunderland</option>
+                    <option value="Swansea City">Swansea City</option>
+                    <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                    <option value="Watford">Watford</option>
+                    <option value="West Bromwich Albion">West Bromwich Albion</option>
+                    <option value="West Ham">West Ham</option>
+                    <option value="Wigan Athletic">Wigan Athletic</option>
+                    <option value="Wolves">Wolves</option>
+                </select>
+            </div>
+            <br>
+            <div class="s2">
+                <label for="Home_Team_ELO">Home Team ELO</label>&nbsp;&nbsp;
+                <input type="text" name="Home_Team_ELO" id="Home_Team_ELO" placeholder="Home_Team_ELO" required>
+            </div>
+            <br>
+            <div class="s2">
+                <label for="Away_Team_ELO">Away Team ELO</label>&nbsp;&nbsp;
+                <input type="text" name="Away_Team_ELO" id="Away_Team_ELO" placeholder="Away_Team_ELO" required>
+            </div>
+            <br>
+            <div class="s2">
+                <label for="Capital">Capital to Spend</label>&nbsp;&nbsp;
+                <input type="text" name="Capital" id="Capital" placeholder="Capital" required>
+            </div>
+            <br>
+            <div class="s2">
+                <label for="Choice">Predict By</label>&nbsp;&nbsp;
+                <select name="Choice" id="Choice" required>
+                    <option value="">Predict By</option>
+                    <option value="1">Predict Outcome</option>
+                    <option value="2">Predict Goal Difference</option>
+                    <option value="3">Predict Goals Scored</option>
+                </select>
+            </div>
+            <br>
+            <button input type="submit">Predict</button>
+        </center>
+    </form>
+    </div>
+
+</body>
+
+</html>

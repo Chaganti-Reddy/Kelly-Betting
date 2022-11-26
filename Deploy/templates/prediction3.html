@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        .name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            height: 60px;
+            width: 500px;
+            padding: 10px;
+            background-color: rgba(116, 64, 211, 0.774);
+            border: green solid 3px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Meera Inimai', sans-serif;
+            color: rgb(31, 196, 105);
+        }
+
+        .t {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #tb_main{
+            width: 800px;
+        }
+
+        .table {
+            width: 600px;
+            background-color: rgba(116, 64, 211, 0.774);
+            border-style: solid;
+            border: green solid 5px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Meera Inimai', sans-serif;
+            color: rgb(31, 196, 105);
+        }
+
+        table {
+            border-collapse: collapse;
+            border-style: solid;
+            border-color: black;
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#b696db">
+    <center>
+        <div class="t">
+            <div class="name"> Home Team : {{ Home_Team_Name }}</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="name"> Away Team : {{ Away_Team_Name }}</div>
+        </div>
+        <br>
+        <div class="t">
+            <div class="table">
+                <table border="2">
+                    <tr>Home Team</tr>
+                    <tr>
+                        <td>Goals</td>
+                        <td>Probability</td>
+                        <td>Odds</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>{{ home_proba_of_0goal }}</td>
+                        <td>{{ home_odds_of_0goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ home_proba_of_1goal }}</td>
+                        <td>{{ home_odds_of_1goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ home_proba_of_2goal }}</td>
+                        <td>{{ home_odds_of_2goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ home_proba_of_3goal }}</td>
+                        <td>{{ home_odds_of_3goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{ home_proba_of_4goal }}</td>
+                        <td>{{ home_odds_of_4goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{ home_proba_of_5goal }}</td>
+                        <td>{{ home_odds_of_5goal }}</td>
+                    </tr>
+                </table>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <div class="table">
+                <table border="2">
+                    <tr>Away Team</tr>
+                    <tr>
+                        <td>Goals</td>
+                        <td>Probability</td>
+                        <td>Odds</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>{{ away_proba_of_0goal }}</td>
+                        <td>{{ away_odds_of_0goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ away_proba_of_1goal }}</td>
+                        <td>{{ away_odds_of_1goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{{ away_proba_of_2goal }}</td>
+                        <td>{{ away_odds_of_2goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{{ away_proba_of_3goal }}</td>
+                        <td>{{ away_odds_of_3goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>{{ away_proba_of_4goal }}</td>
+                        <td>{{ away_odds_of_4goal }}</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>{{ away_proba_of_5goal }}</td>
+                        <td>{{ away_odds_of_5goal }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="table" id="tb_main">
+            <table border="2">
+                <tr>Score Table</tr>
+                <tr>
+                    <td colspan="8">{{ Away_Team_Name }}</td>
+                </tr>
+                <tr>
+                    <td rowspan="8">{{ Home_Team_Name }}</td>
+                </tr>
+                <tr>
+                    <td>Goals</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>{{ goal_00 }}</td>
+                    <td>{{ goal_01 }}</td>
+                    <td>{{ goal_02 }}</td>
+                    <td>{{ goal_03 }}</td>
+                    <td>{{ goal_04 }}</td>
+                    <td>{{ goal_05 }}</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>{{ goal_10 }}</td>
+                    <td>{{ goal_11 }}</td>
+                    <td>{{ goal_12 }}</td>
+                    <td>{{ goal_13 }}</td>
+                    <td>{{ goal_14 }}</td>
+                    <td>{{ goal_15 }}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{ goal_20 }}</td>
+                    <td>{{ goal_21 }}</td>
+                    <td>{{ goal_22 }}</td>
+                    <td>{{ goal_23 }}</td>
+                    <td>{{ goal_24 }}</td>
+                    <td>{{ goal_25 }}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{ goal_30 }}</td>
+                    <td>{{ goal_31 }}</td>
+                    <td>{{ goal_32 }}</td>
+                    <td>{{ goal_33 }}</td>
+                    <td>{{ goal_34 }}</td>
+                    <td>{{ goal_35 }}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{ goal_40 }}</td>
+                    <td>{{ goal_41 }}</td>
+                    <td>{{ goal_42 }}</td>
+                    <td>{{ goal_43 }}</td>
+                    <td>{{ goal_44 }}</td>
+                    <td>{{ goal_45 }}</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{ goal_50 }}</td>
+                    <td>{{ goal_51 }}</td>
+                    <td>{{ goal_52 }}</td>
+                    <td>{{ goal_53 }}</td>
+                    <td>{{ goal_54 }}</td>
+                    <td>{{ goal_55 }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="t">
+            <div class="name" style="width: 800px;">
+                Predicted Home Team Goals {{ home_team_goal }}
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="name" style="width: 800px;">
+                Predicted Away Team Goals {{ away_team_goal }}
+            </div>
+        </div>
+        <div class="t">
+            <div class="name" style="width: 800px;">You should bet {{ betting_amount_home }} £ as per Kelly Betting in
+                Home Team</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="name" style="width: 800px;">You should bet {{ betting_amount_away }} £ as per Kelly Betting in
+                Away Team</div>
+
+        </div>
+        <br>
+        <div class="t">
+            <div class="name">Profit would be {{ profit_home }} £ in Home Team</div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="name">Profit would be {{ profit_away }} £ in Away Team</div>
+        </div>
+        <br>
+    </center>
+</body>
+
+</html>
