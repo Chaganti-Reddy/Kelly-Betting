@@ -274,4 +274,4 @@ Feel free to mail me for any doubts/query
 
 # 👀 License
 
-MIT © [Chaganti Reddy](https://github.com/Chaganti-Reddy/Kelly-Betting/blob/main/LICENSE)
+Apache © [Chaganti Reddy](https://github.com/Chaganti-Reddy/Kelly-Betting/blob/main/LICENSE)
