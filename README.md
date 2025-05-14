@@ -272,23 +272,6 @@ python3 main.py
 Feel free to mail me for any doubts/query
 ✉️ chagantivenkataramireddy1@gmail.com
 
----
-
-# 🙋 Citation
-
-You are allowed to cite any part of the code or our dataset. You can use it in your Research Work or Project. Remember to provide credit to the Maintainer Chaganti Reddy by mentioning a link to this repository and her GitHub Profile.
-
-Follow this format:
-
-- Author's name - Chaganti Reddy
-- Date of publication or update in parentheses.
-- Title or description of document.
-- URL.
-
-# ❤️ Owner
-
-Made with ❤️&nbsp; by [Chaganti Reddy](https://github.com/Chaganti-Reddy/)
-
 # 👀 License
 
 MIT © [Chaganti Reddy](https://github.com/Chaganti-Reddy/Kelly-Betting/blob/main/LICENSE)
